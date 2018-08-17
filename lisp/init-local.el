@@ -1,6 +1,10 @@
-(setq org-agenda-files (directory-files-recursively "~/Dropbox/GTD/" "\.org$"))
-(setq org-default-notes-file (concat org-directory "/inbox.org"))
+(setq org-directory "~/Dropbox/GTD/")
+(setq org-agenda-files (directory-files-recursively org-directory "\.org$"))
+(setq org-default-notes-file (concat org-directory "indox.org")) ;; capture every things into indox.org
+(setq org-default-journal-file (concat org-directory "journal.org"))
+
 (setq org-todo-keywords `((sequence "TODO(t!)" "Next(n)" "WAITING(w)" "SOMEDAY(s)" "|" "DONE(d@/!)" "ABORT(a@/!)")))
+
 
 (defun s-font()
   (interactive)

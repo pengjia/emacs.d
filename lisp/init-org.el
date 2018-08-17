@@ -111,8 +111,8 @@ typical word processor."
 
 (setq org-capture-templates
       `(("t" "todo" entry (file "")  ; "" => `org-default-notes-file'
-         "* NEXT %?\n%U\n" :clock-resume t)
-        ("n" "note" entry (file "")
+         "* TODO %?\n%U\n" :clock-resume t)
+        ("n" "journal" entry (file org-default-journal-file)
          "* %? :NOTE:\n%U\n%a\n" :clock-resume t)
         ))
 
