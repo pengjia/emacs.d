@@ -1,4 +1,7 @@
-(setq org-agenda-files '("~/Dropbox/GTD/todo.org"))
+(setq org-agenda-files (directory-files-recursively "~/Dropbox/GTD/" "\.org$"))
+(setq org-default-notes-file (concat org-directory "/inbox.org"))
+(setq org-todo-keywords `((sequence "TODO(t!)" "Next(n)" "WAITING(w)" "SOMEDAY(s)" "|" "DONE(d@/!)" "ABORT(a@/!)")))
+
 (defun s-font()
   (interactive)
   (set-default-font "monospace-11")
