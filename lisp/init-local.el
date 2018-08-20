@@ -1,3 +1,6 @@
+(global-set-key (kbd "C-c C-v")
+                'org-capture)
+
 (setq org-directory "~/Dropbox/GTD/")
 (setq org-agenda-files (directory-files-recursively org-directory "\.org$"))
 (setq org-default-notes-file (concat org-directory "inbox.org")) ;; capture every things into inbox.org
