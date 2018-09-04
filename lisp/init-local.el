@@ -5,6 +5,8 @@
 (setq org-agenda-files (directory-files-recursively org-directory "\.org$"))
 (setq org-default-notes-file (concat org-directory "inbox.org")) ;; capture every things into inbox.org
 (setq org-default-journal-file (concat org-directory "journal.org"))
+(setq org-archive-location (concat org-directory "archive.org::"))
+(setq org-refile-targets '((org-agenda-files :maxlevel . 3)))
 
 (setq org-todo-keywords `((sequence "TODO(t!)" "NEXT(n)" "WAITING(w)" "SOMEDAY(s)" "|" "DONE(d@/!)" "ABORT(a@/!)")))
 
