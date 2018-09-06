@@ -6,13 +6,13 @@
 
 (defun s-font()
   (interactive)
-  (set-default-font "monospace-11")
+  (set-default-font "monospace-14")
   (setq fonts
         (cond ((eq system-type 'darwin)     '("Monaco"    "STHeiti"))
               ((eq system-type 'gnu/linux)  '("Menlo"     "WenQuanYi Zen Hei"))
               ((eq system-type 'windows-nt) '("Consolas"  "Microsoft Yahei"))))
   (set-face-attribute 'default nil :font
-                      (format "%s:pixelsize=%d" (car fonts) 14))
+                      (format "%s:pixelsize=%d" (car fonts) 18))
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font) charset
                       (font-spec :family (car (cdr fonts)))))
