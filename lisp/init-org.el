@@ -104,10 +104,10 @@ typical word processor."
 
 
 (setq org-support-shift-select t)
-
+
 ;;; Capturing
 
-(global-set-key (kbd "C-c C-v") 'org-capture)
+(global-set-key (kbd "C-c c") 'org-capture)
 
 (setq org-capture-templates
       `(("t" "todo" entry (file "")  ; "" => `org-default-notes-file'
