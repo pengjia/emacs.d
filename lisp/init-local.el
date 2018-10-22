@@ -3,6 +3,7 @@
 (setq org-default-notes-file (concat org-directory "inbox.org")) ;; capture every things into inbox.org
 (setq org-default-journal-file (concat org-directory "journal.org"))
 (setq org-archive-location (concat org-directory "archive.org::"))
+(setq org-refile-targets '((org-agenda-files :maxlevel . 2)))
 
 (defun s-font()
   (interactive)
@@ -25,6 +26,8 @@
                (if window-system (s-font))))
 (if window-system
     (s-font))
+
+(elpy-enable)
 
 (provide 'init-local)
 ;;;
