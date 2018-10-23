@@ -8,7 +8,13 @@
 (when (maybe-require-package 'anaconda-mode)
   (after-load 'python
     (add-hook 'python-mode-hook 'anaconda-mode)
-    (add-hook 'python-mode-hook 'anaconda-eldoc-mode))
+    (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+    (add-hook 'python-mode-hook
+              (lambda ()
+                (setq-default indent-tabs-mode t)
+                (setq-default tab-width 4)
+                (setq-default py-indent-tabs-mode t)
+                (add-to-list 'write-file-functions 'delete-trailing-whitespace))))
   (when (maybe-require-package 'company-anaconda)
     (after-load 'company
       (add-hook 'python-mode-hook
