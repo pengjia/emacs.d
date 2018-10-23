@@ -27,7 +27,5 @@
 (if window-system
     (s-font))
 
-(elpy-enable)
-
 (provide 'init-local)
 ;;;

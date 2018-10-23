@@ -99,6 +99,7 @@
 (require 'init-haml)
 (require 'init-http)
 (require 'init-python)
+(require 'init-conda)
 (require 'init-pep8)
 (require 'init-haskell)
 (require 'init-elm)
