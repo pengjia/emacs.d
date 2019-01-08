@@ -113,6 +113,7 @@
 (require 'init-docker)
 (require 'init-terraform)
 (require 'init-plantuml)
+(require 'init-golang)
 ;;(require 'init-nix)
 (maybe-require-package 'nginx-mode)
 

@@ -3,8 +3,12 @@
 (autoload 'go-mode "go-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
 
-(when (maybe-require-package 'go-mode)
-  (after-load 'go-mode)
-  (add-hook 'before-save-hook #'gofmt-before-save))
+(add-hook 'go-mode-hook
+		  (lambda ()
+			(add-hook 'before-save-hook 'gofmt-before-save)
+			(setq tab-width 4)
+			(setq indent-tabs-mode 1)
+			)
+		  )
 
 (provide 'init-golang)
