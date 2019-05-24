@@ -13,6 +13,7 @@
   (setq indent-tabs-mode 1)
   (add-hook 'before-save-hook 'gofmt-before-save)
   (local-set-key (kbd "M-.") 'godef-jump)
+  (local-set-key (kbd "M-*") 'pop-tag-mark)
   )
 
 (add-hook 'go-mode-hook 'go-mode-setup)
