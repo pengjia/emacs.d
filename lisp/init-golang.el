@@ -1,6 +1,5 @@
 (require-package 'go-mode)
 (require-package 'go-eldoc)
-(require-package 'go-autocomplete)
 (require-package 'golint)
 
 (autoload 'go-mode "go-mode" nil t)
