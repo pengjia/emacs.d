@@ -1,6 +1,10 @@
-(when (maybe-require-package 'yaml-mode)
-  (add-auto-mode 'yaml-mode "\\.yml\\.erb\\'")
-  (add-hook 'yaml-mode-hook 'goto-address-prog-mode))
+(require-package 'yaml-mode)
+
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+
+(add-hook 'yaml-mode-hook
+		  (lambda ()
+			(define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
 
 (provide 'init-yaml)
