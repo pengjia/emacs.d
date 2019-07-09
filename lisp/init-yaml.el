@@ -8,3 +8,4 @@
 
 
 (provide 'init-yaml)
+;;; init-yaml.el ends here
