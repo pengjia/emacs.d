@@ -143,7 +143,8 @@
 
 ;;(require 'init-twitter)
 ;; (require 'init-mu)
-(require 'init-ledger)
+;;(require 'init-ledger)
+(require 'init-beancount)
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
