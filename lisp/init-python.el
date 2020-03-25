@@ -22,6 +22,9 @@
     (add-hook 'python-mode-hook
               (lambda () (unless (file-remote-p default-directory)
                       (anaconda-mode 1))))
+    (add-hook 'python-mode-hook
+              (lambda ()
+                (electric-indent-mode -1)))
     (add-hook 'python-mode-hook 'anaconda-eldoc-mode)
     (add-hook 'python-mode-hook
               (lambda ()
